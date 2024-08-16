@@ -1,0 +1,82 @@
+.verticalScrollBar {
+  height: calc(100vh - 6.4rem);
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-width: thin;
+  scrollbar-color: var(--scrollbar-thumb-color) var(--scrollbar-bg-color);
+}
+
+.user {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 24rem;
+  min-width: 18rem;
+  border: solid var(--user-border-color);
+  border-radius: 0.5rem;
+
+  .btnPosts {
+    margin: 0.5rem;
+    padding: 0.5rem;
+    text-decoration: none;
+    color: var(--user-posts-link-color);
+    background: var(--user-posts-link-bg-color);
+    border-radius: 0.3rem;
+    border: none;
+
+    &:hover {
+      background: var(--user-posts-link-bg-hover-color);
+    }
+  }
+
+  .btnExpand {
+    display: inherit;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem;
+    border-radius: inherit;
+    cursor: pointer;
+    box-shadow: 0 0 0.4rem 0 var(--box-shadow-color);
+
+    .userName {
+      letter-spacing: 0.07rem;
+
+      &--fullWidth {
+        width: 100%;
+      }
+    }
+
+    &:hover {
+      background: var(--user-posts-link-bg-color);
+    }
+
+    .arrowDown {
+      color: var(--user-collapse-arrow-down-color);
+    }
+    .arrowUp {
+      color: var(--user-collapse-arrow-up-color);
+    }
+  }
+
+  .revertChanges,
+  .submitChanges {
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    border-style: none;
+    transition: ease-in-out 0.2s;
+
+    &:hover {
+      background: var(--user-form-btn-bg-hover-color);
+    }
+
+    &:disabled {
+      pointer-events: none;
+      color: var(--user-form-disabled-btn-color);
+      background: var(--user-form-disabled-btn-bg-color);
+    }
+  }
+
+  .labelText {
+    text-align: left;
+  }
+}
