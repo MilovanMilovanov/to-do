@@ -76,7 +76,7 @@ function TaskList() {
         statusFilterOptions={statusFilterOptions}
         setFilteredTasks={setFilteredTasks}
       />
-      +
+      
       <TaskListTable
         paginatedTasks={paginatedTasks}
         handleStatusChange={handleStatusChange}
