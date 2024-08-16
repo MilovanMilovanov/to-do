@@ -18,7 +18,6 @@ function Select({
   className = "",
   onChange,
 }: SelectModel) {
-  console.log(value);
 
   return (
     <select
